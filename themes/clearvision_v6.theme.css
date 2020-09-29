@@ -1,0 +1,117 @@
+/**
+ * @name Docent Blue
+ * @author kwiatek_123#2256
+ * @version 1
+ * @description Niebieski motyw bazujący na ClearVision
+ * @source https://github.com/ClearVision/ClearVision-v6
+ * @website http://docentcompany.com
+ * @invite 2fKpjAR
+ */
+
+/* Wszelkie prawa i zasługi: Zerthox za zrobienie bazowego motywu. */
+/* Tłumaczenie/Translation: Kuroikitten */
+
+/* IMPORTUJ CSS */
+@import url(https://clearvision.gitlab.io/v6/main.css);
+
+/* USTAWIENIA */
+:root {
+
+	/* GŁÓWNE KOLORY */
+	--main-color: #2780e6; /* główny kolor akcentu (hex, rgb lub hsl) [standardowo: #2780e6] */
+	--hover-color: #1e63b3; /* kolor paska przewijania (hex, rgb lub hsl) [standardowo: #1e63b3] */
+	--success-color: #43b581; /* kolor potwierdzenia (hex, rgb lub hsl) [standardowo: #43b581] */
+	--danger-color: #982929; /* kolor ostrzeżenia (hex, rgb lub hsl) [standardowo: #982929] */
+	
+	/* KOLORY DODATKOWE */
+	--channel-unread: #FF0000; /* kolor nieprzeczytanych kanałów. [standardowo:  var(--main-color)] TO NADPISUJE GŁÓWNY KOLOR*/
+	--channel-color:  rgba(255,255,255,0.3); /*kolor kanałów [standardowo: rgba(255,255,255,0.3);]*/
+	--muted-color: rgba(255,255,255,0.1); /*kolor wyciszonych kanałów  [standardowo: rgba(255,255,255,0.1);]*/
+	--url-color: var(--main-color); /*kolor linków [standardowo: var(--main-color)]*/     
+
+	/* KOLORY STATUSU */
+	--online-color: #43b581; /* kolor statusu dostępny (hex, rgb or hsl) [standardowo: #43b581] */
+	--idle-color: #faa61a; /* kolor statusu zaraz wracam (hex, rgb or hsl) [standardowo: #faa61a] */
+	--dnd-color: #982929; /* kolor statusu nie przeszkadzać (hex, rgb or hsl) [standardowo: #982929] */
+	--streaming-color: #593695; /* kolor statusu streamuje (hex, rgb or hsl) [standardowo: #593695] */
+	--offline-color: #808080; /* kolor statusu niewidoczny/niedostępny (hex, rgb or hsl) [standardowo: #808080] */
+
+	/* OGÓLNE */
+	--main-font: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif; /* główna czcionka (czcionka musi być zainstalowana) [standardowo: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif] */
+	--code-font: Consolas, Liberation Mono, Menlo, Courier, monospace; /* czcionka w blokach kodu (czcionka musi być zainstalowana) [standardowo: Consolas, Liberation Mono, Menlo, Courier, monospace] */
+	--server-columns: 1; /* ilość kolumn serwerów [standardowo: 1] */
+	--channels-width: 220px; /* szerokość listy kanałów (standard discord - 240px) [standardowo: 220px] */
+	--members-width: 240px; /* szerokość listy członków [standardowo: 240px] */
+	--avatar-roundness: 50%; /* okrągłość avatarów (0% - kwadraty, 50% - koła) [standardowo: 50%] */
+
+	/* TŁO APLIKACJI */
+	--background-shading: 100%; /* cieniowanie tła (0 for complete smoothness) [standardowo: 100%] */
+	--background-overlay: rgba(0, 0, 0, 0.6); /* kolor/gradnient tła [standardowo: rgba(0, 0, 0, 0.6)] */
+	--background-image: url(https://clearvision.gitlab.io/images/sapphire.jpg); /* obraz tła (link musi być HTTPS) [standardowo: url(https://clearvision.gitlab.io/images/sapphire.jpg)]*/
+	--background-position: center; /* pozycja tła [standardowo: center] */
+	--background-size: cover; /* rozmiar tła [standardowo: cover] */
+	--background-repeat: no-repeat; /* powtarzanie tła [standardowo: no-repeat] */
+	--background-attachment: fixed; /* blokada tła [standardowo: fixed] */
+	--background-brightness: 100%; /* jasność tła (< 100% for darken, > 100% for lighten) [standardowo: 100%] */
+	--background-contrast: 100%; /* kontrast tła [standardowo: 100%] */
+	--background-saturation: 100%; /* nasycenie tła [standardowo: 100%] */
+	--background-invert: 0%; /* negatyw tła (0 - 100%)  [standardowo: 0%] */
+	--background-grayscale: 0%; /* czarno-biały ( 0 - 100%) [standardowo: 0%] */
+	--background-sepia: 0%; /* sepia tła (0 - 100%) [standardowo: 0%] */
+	--background-blur: 0px; /* rozmazanie tła [standardowo: 0px] */
+	
+	/* IKONA PRZYCISKU TŁA */
+	--home-icon: url(https://clearvision.gitlab.io/icons/discord.svg); /* ikona przycisku home (link musi być HTTPS) [standardowo: url(https://clearvision.gitlab.io/icons/discord.svg)]*/
+	--home-position: center; /* pozycja ikony [standardowo: center] */
+	--home-size: 40px; /* wielkość ikony/zoom [standardowo: 40px] */
+	
+	/* TŁO MODALNE */
+	--backdrop-overlay: rgba(0, 0, 0, 0.8); /* kolor/gradnient tła modalnego [standardowo: rgba(0, 0, 0, 0.8)] */
+	--backdrop-image: var(--background-image); /* obraz tła modalnego(link must be HTTPS) [standardowo: var(---background-image)] */
+	--backdrop-position: var(--background-position); /* pozycja tła modalnego[standardowo: var(---background-position)] */
+	--backdrop-size: var(--background-size); /* rozmiar tła modalnego[standardowo: var(---background-size)] */
+	--backdrop-repeat: var(--background-repeat); /* powtarzanie tła modalnego[standardowo: var(---background-repeat)] */
+	--backdrop-attachment: var(--background-attachment); /* blokada tła modalnego[standardowo: var(--background-attachment)] */
+	--backdrop-brightness: var(--background-brightness); /* jasność tła modalnego(< 100% for darken, > 100% for lighten) [standardowo: var(---background-brightness)] */
+	--backdrop-contrast: var(--background-contrast); /* kontrast tła modalnego[standardowo: var(---background-contrast)] */
+	--backdrop-saturation: var(--background-saturation); /* nasycenie tła modalnego[standardowo: var(---background-saturation)] */
+	--backdrop-invert: var(--background-invert); /* negatyw tła modalnego(0 - 100%)  [standardowo: var(---background-invert)] */
+	--backdrop-grayscale: var(--background-grayscale); /* czarno-białołść tła modalnego( 0 - 100%) [standardowo: var(---background-grayscale)] */
+	--backdrop-sepia: var(--background-sepia); /* sepia tła modalnego(0 - 100%) [standardowo: var(---background-sepia)] */
+	--backdrop-blur: var(--background-blur); /* rozmazanie tła modalnego[standardowo: var(--background-blur)] */
+	
+	/* TŁO UŻYTKOWNIKA */
+	--user-popout-image: var(--background-image); /* obraz tła (link musi być HTTPS) [standardowo: var(---background-image)] */
+	--user-popout-position: var(--background-position); /* pozycja tła [standardowo: var(---background-position)] */
+	--user-popout-size: var(--background-size); /* rozmiar tła [standardowo: var(---background-size)] */
+	--user-popout-repeat: var(--background-repeat); /* powtarzanie tła [standardowo: var(---background-repeat)] */
+	--user-popout-attachment: var(--background-attachment); /* blokada tła [standardowo: var(--background-attachment)] */
+	--user-popout-brightness: var(--background-brightness); /* jasność tła (< 100% for darken, > 100% for lighten) [standardowo: var(---background-brightness)] */
+	--user-popout-contrast: var(--background-contrast); /* kontrast tła [standardowo: var(---background-contrast)] */
+	--user-popout-saturation: var(--background-saturation); /* nasycenie tła [standardowo: var(---background-saturation)] */
+	--user-popout-invert: var(--background-invert); /* negatyw tła (0 - 100%) [standardowo: var(---background-invert)] */
+	--user-popout-grayscale: var(--background-grayscale); /* czarno-biały (0 - 100%) [standardowo: var(---background-grayscale)] */
+	--user-popout-sepia: var(--background-sepia); /* sepia tła (0 - 100%) [standardowo: var(---background-sepia)] */
+	--user-popout-blur: calc(var(--background-blur) + 3px); /* rozmazanie tła [standardowo: calc(var(--background-blur) + 3px)] */
+	
+	/* TŁO PROFILU UŻYTKOWNKA */
+	--user-modal-image: var(--background-image); /* obraz tła (link must be HTTPS) [standardowo: var(---background-image)] */
+	--user-modal-position: var(--background-position); /* pozycja tła [standardowo: var(---background-position)] */
+	--user-modal-size: var(--background-size); /* rozmiar tła [standardowo: var(---background-size)] */
+	--user-modal-repeat: var(--background-repeat); /* powtarzanie tła [standardowo: var(---background-repeat)] */
+	--user-modal-attachment: var(--background-attachment); /* blokada tła [standardowo: var(--background-attachment)] */
+	--user-modal-brightness: var(--background-brightness); /* jasność tła (< 100% for darken, > 100% for lighten) [standardowo: var(---background-brightness)] */
+	--user-modal-contrast: var(--background-contrast); /* kontrast tła [standardowo: var(---background-contrast)] */
+	--user-modal-saturation: var(--background-saturation); /* nasycenie tła [standardowo: var(---background-saturation)] */
+	--user-modal-invert: var(--background-invert); /* negatyw tła (0 - 100%) [standardowo: var(---background-invert)] */
+	--user-modal-grayscale: var(--background-grayscale); /* czarno-biały (0 - 100%) [standardowo: var(---background-grayscale)] */
+	--user-modal-sepia: var(--background-sepia); /* sepia tła (0 - 100%) [standardowo: var(---background-sepia)] */
+	--user-modal-blur: calc(var(--background-blur) + 3px); /* rozmazanie tła [standardowo: calc(var(--background-blur) + 3px)] */
+	
+	/* KOLORY BETTERDISCORD */
+	--bd-blue: var(--main-color); /* główny kolor betterdiscord [standardowo: var(--main-color)] */
+	--bd-blue-hover: var(--hover-color); /* kolor suwaka betterdiscord [standardowo: var(--hover-color)] */
+	--bd-blue-active: var(--hover-color); /* kolor aktywny betterdiscord [standardowo: var(--hover-color)] */
+	
+	
+}
